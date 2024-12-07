@@ -1,0 +1,66 @@
+.border{
+    border: 1px solid rgb(255, 255, 255);
+    margin: 3px;
+}
+.flex{
+    display: flex;
+}
+.hidden{
+    display: none;
+}
+.pointer{
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .hidden{
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.item-center{
+    align-items: center;
+}
+.filter{
+    filter: invert(1);
+}
+
+
+.cardContainer::-webkit-scrollbar {
+    width: 15px; /* Width of the scrollbar */
+    
+}
+
+.cardContainer::-webkit-scrollbar-thumb {
+    background-color: #333; 
+    border-radius: 6px;
+}
+
+.cardContainer::-webkit-scrollbar-track {
+    background-color: #222; 
+}
+.songList ul::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    
+}
+
+.songList ul::-webkit-scrollbar-thumb {
+    background-color: #333; 
+    border-radius: 6px;
+}
+
+.songList ul::-webkit-scrollbar-track {
+    background-color: #222; 
+}
+
+.width{
+    width: px;
+    height: auto;
+}
+
+
