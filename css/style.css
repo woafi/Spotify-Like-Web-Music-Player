@@ -471,6 +471,10 @@ body {
 
 @media (max-width: 608px) {
 
+    .library{
+        height: 72vh;
+    }
+
     .cardContainer {
         max-height: 52vh
     }
@@ -491,7 +495,7 @@ body {
         position: absolute;
         left: -200%;
         transition: all .3s;
-        width: 400px;
+        width: 375px;
         z-index: 25;
     }
 }

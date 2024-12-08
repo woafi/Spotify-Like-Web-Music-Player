@@ -11,6 +11,7 @@ A responsive and interactive web-based music player inspired by Spotify. Users c
 - **Mute Functionality:** Easily mute/unmute audio with a single click.
 - **Responsive Design:** Optimized for mobile and desktop, includes a hamburger menu for mobile devices.
 - **Interactive UI:** Smooth transitions and user-friendly interactions.
+- **Auto Play:** Next song plays automatically after the current one finishes.
 
 ---
 
@@ -27,9 +28,3 @@ A responsive and interactive web-based music player inspired by Spotify. Users c
 > Link to live demo
 
 --- https://wspotify.freewebhostmost.com/
-
-## Installation and Usage 📥
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/spotify-like-web-music-player.git

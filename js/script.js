@@ -113,7 +113,11 @@ async function displayAlbums() {
             // await getSongs(`${e.dataset.folder}`)
             songs = await getSongs(`${e.dataset.folder}`)
             // console.log(songs);
-            playMusic(songs[0])
+            if (currSong.paused) {
+                playMusic(songs[0])
+                currSong.play()
+                play.src = "svg/pause.svg"
+            }
         })
     });
 
@@ -192,6 +196,17 @@ async function main() {
             playMusic(songs[index + 1])
         }
     })
+     
+    //autolay when song's duration ends
+    currSong.addEventListener('ended', () => {
+        let index = songs.indexOf(currSong.src.split("/").slice(-1)[0])
+        if ((index + 1) < songs.length) {
+            playMusic(songs[index + 1])
+            }
+        })
+            
+
+
     //add an event listener to volume
     document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change", (e) => {
         console.log("Setting volume to", e.target.value, "/100")
