@@ -18,7 +18,7 @@ function formatTime(seconds) {
 
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`http://127.0.0.1:3000/Spotify%20Clone/song/${folder}/`)
+    let a = await fetch(`http://127.0.0.1:3000/song/${folder}/`)
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML = response;
@@ -58,7 +58,7 @@ async function getSongs(folder) {
 
 //Play music function
 function playMusic(track, pause = false) {
-    currSong.src = `/Spotify Clone/song/${currFolder}/` + track;
+    currSong.src = `/song/${currFolder}/` + track;
     if (!pause) {
         currSong.play();
         play.src = "svg/pause.svg";
@@ -69,7 +69,7 @@ function playMusic(track, pause = false) {
 }
 
 async function displayAlbums() {
-    let a = await fetch(`http://127.0.0.1:3000/Spotify%20Clone/song/`)
+    let a = await fetch(`http://127.0.0.1:3000/song`)
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML = response;
@@ -83,10 +83,10 @@ async function displayAlbums() {
 
         // console.log(e.href)
         if (e.href.includes("/song")) {
-            // console.log(e.href.split("/").slice(-2)[0])
-            let folder = e.href.split("/")[5]
+            console.log(e.href.split("/").slice(-2)[0])
+            let folder = e.href.split("/").slice(-2)[0]
             //get the metadata of the folder
-            let a = await fetch(`http://127.0.0.1:3000/Spotify%20Clone/song/${folder}/info.json`)
+            let a = await fetch(`http://127.0.0.1:3000/song/${folder}/info.json`)
             let response = await a.json();
             // console.log(response)
             cardContainer.innerHTML += `<div data-folder="${folder}" class="card">
@@ -126,7 +126,7 @@ async function displayAlbums() {
 async function main() {
 
     //Get the list of all songs
-    await getSongs(`cs`)
+    await getSongs(`Maroon_5`)
     //for loading the song after refresh
     playMusic(songs[0], true)
 

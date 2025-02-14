@@ -27,4 +27,4 @@ A responsive and interactive web-based music player inspired by Spotify. Users c
 
 > Link to live demo
 
---- https://wspotify.freewebhostmost.com/
+--- https://spotifywebplay.freewebhostmost.com/
