@@ -29,8 +29,8 @@ A responsive and interactive web-based music player inspired by Spotify. Users c
 - After downloading, extract the zip in a folder
 - Then open the **index.html** in vscode using the **live preview** extension of vscode
 - Enjoy the project
-<!-- ## Demo 
+## Demo 
 
 > Link to live demo
 
---- https://spotifywebplay.freewebhostmost.com/ -->
+--- http://spotifywebplayer.42web.io/
