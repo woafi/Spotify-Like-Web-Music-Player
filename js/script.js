@@ -69,7 +69,7 @@ function playMusic(track, pause = false) {
 }
 
 async function displayAlbums() {
-    let a = await fetch(`http://127.0.0.1:3000/song`)
+    let a = await fetch(`/song`)
     let response = await a.text();
     // console.log(response)
     let div = document.createElement("div")
@@ -88,7 +88,7 @@ async function displayAlbums() {
             let folder = e.href.split("/").slice(-2)[0]
             console.log(folder)
             //get the metadata of the folder
-            let a = await fetch(`http://127.0.0.1:3000/song/${folder}/info.json`)
+            let a = await fetch(`/song/${folder}/info.json`)
             let response = await a.json();
             // console.log(response)
             cardContainer.innerHTML += `<div data-folder="${folder}" class="card">
@@ -128,7 +128,7 @@ async function displayAlbums() {
 async function main() {
 
     //Get the list of all songs
-    await getSongs(`Maroon_5`)
+    await getSongs(`Mix`)
     //for loading the song after refresh
     playMusic(songs[0], true)
 
